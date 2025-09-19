@@ -1,0 +1,20 @@
+-- schema.sql
+CREATE DATABASE IF NOT EXISTS meeting_scheduler
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE meeting_scheduler;
+
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NULL,
+  full_name VARCHAR(150),
+  role VARCHAR(30) NOT NULL DEFAULT 'USER',
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  is_deleted TINYINT(1) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  last_login TIMESTAMP NULL,
+  deleted_at TIMESTAMP NULL,
+  UNIQUE KEY uk_users_email (email),
+  INDEX idx_users_role (role)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
