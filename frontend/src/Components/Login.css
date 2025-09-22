@@ -1,0 +1,257 @@
+/* ==== Base Login Layout ==== */
+.login {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  font-family: Poppins, sans-serif;
+}
+
+/* Left side (form container) */
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Right side (image) */
+.login-image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==== Text styles ==== */
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+  margin-top: 8px;
+  display: block;
+}
+
+/* ==== Input groups ==== */
+.input-group {
+  margin-top: 20px;
+}
+
+.input-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 0.9rem;
+}
+
+.input-username,
+.input-password {
+  margin-top: 16px;
+}
+
+/* ==== Checkbox & Links ==== */
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.remember-me .checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+}
+
+.signup-link {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #0c2a92;
+  cursor: pointer;
+}
+
+/* ==== Button ==== */
+.login-button {
+  margin-top: 20px;
+  width: 100%;
+  height: 42px;
+  background: #3a5b22;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==== Divider ==== */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider .line {
+  flex: 1;
+  border-top: 1px solid #f5f5f5;
+}
+
+.divider-text {
+  margin: 0 8px;
+  background: #fff;
+  padding: 0 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ==== Google Login ==== */
+.google-login-container {
+  margin-top: 20px;
+}
+
+.google-login-button {
+  width: 100%;
+  height: 42px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3c4043;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.google-login-button:hover {
+  background: #f8f9fa;
+  border-color: #c4c7c5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+.google-login-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.google-icon {
+  flex-shrink: 0;
+}
+
+/* ==== Social login (Legacy) ==== */
+.social-login {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.google-login,
+.apple-login {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.google-login span,
+.apple-login span {
+  margin-left: 8px;
+  font-size: 0.85rem;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 1024px) {
+  .login {
+    flex-direction: column;
+  }
+
+  .login-container {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .login-image {
+    flex: none;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-text {
+    font-size: 1.5rem;
+  }
+
+  .sub-text {
+    font-size: 0.8rem;
+  }
+
+  .input-field {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .login-button {
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
+
+  .google-login,
+  .apple-login {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .google-login-button {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+}
+

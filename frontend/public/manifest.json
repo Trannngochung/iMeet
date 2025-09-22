@@ -1,0 +1,10 @@
+{
+  "short_name": "iMeet",
+  "name": "iMeet - Meeting Platform",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#3a5b22",
+  "background_color": "#ffffff",
+  "description": "iMeet - Meeting and collaboration platform"
+}
